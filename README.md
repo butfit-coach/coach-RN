@@ -6,6 +6,8 @@
 
 ## 개발환경
 
+- start project with expo
+  - npx create-expo-app@latest
 - node v23.1.0
 - ✅ yarn v1.22.22
 
