@@ -1,37 +1,46 @@
 import { colors } from "@/src/styles/colors";
 import { Tabs } from "expo-router";
+import { StatusBar } from "expo-status-bar";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
+
 
 export default function TabLayout() {
   return (
-    <Tabs screenOptions={{ tabBarActiveTintColor: colors.mainGreen1 }}>
-      <Tabs.Screen
-        name="index"
-        options={{
-          title: "메인",
-          tabBarIcon: ({ color }) => (
-            <FontAwesome size={28} name="home" color={color} />
-          ),
+    <>
+      {/* 안드로이드 배너 색상 맞추기 위해 사용*/}
+      <StatusBar style="light" backgroundColor={colors.mainGreen1} />
+      <Tabs
+        screenOptions={{
+          headerShown: true,
+          headerStyle: {
+            backgroundColor: colors.mainGreen1,
+          },
+          headerTintColor: "#fff",
+          headerTitleStyle: {
+            fontWeight: "bold",
+          },
+          tabBarActiveTintColor: colors.mainGreen1,
         }}
-      />
-      <Tabs.Screen
-        name="previous"
-        options={{
-          title: "지난 운동 기록",
-          tabBarIcon: ({ color }) => (
-            <FontAwesome size={28} name="cog" color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="exercise"
-        options={{
-          title: "동작 별 기록",
-          tabBarIcon: ({ color }) => (
-            <FontAwesome size={28} name="cog" color={color} />
-          ),
-        }}
-      />
-    </Tabs>
+      >
+        <Tabs.Screen
+          name="index"
+          options={{
+            title: "주간 운동",
+          }}
+        />
+        <Tabs.Screen
+          name="previous"
+          options={{
+            title: "지난 운동 기록",
+          }}
+        />
+        <Tabs.Screen
+          name="exercise"
+          options={{
+            title: "동작 별 기록",
+          }}
+        />
+      </Tabs>
+    </>
   );
 }
