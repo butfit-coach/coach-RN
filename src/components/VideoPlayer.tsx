@@ -6,7 +6,7 @@ const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } = Dimensions.get("window");
 
 export default function VideoPlayer() {
   const videoRef = useRef<VideoRef>(null);
-  const videoSource = require("../../assets/video/77a071c3-c139-409c-bb6c-cfc00a09a9a2.mp4");
+  const videoSource = require("./77a071c3-c139-409c-bb6c-cfc00a09a9a2.mp4");
 
   return (
     <Video
