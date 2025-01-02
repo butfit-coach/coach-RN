@@ -3,23 +3,22 @@ import { Tabs } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 
-
 export default function TabLayout() {
   return (
     <>
       {/* 안드로이드 배너 색상 맞추기 위해 사용*/}
-      <StatusBar style="light" backgroundColor={colors.mainGreen1} />
+      <StatusBar style="light" backgroundColor={colors.green[100]} />
       <Tabs
         screenOptions={{
           headerShown: true,
           headerStyle: {
-            backgroundColor: colors.mainGreen1,
+            backgroundColor: colors.green[100],
           },
           headerTintColor: "#fff",
           headerTitleStyle: {
             fontWeight: "bold",
           },
-          tabBarActiveTintColor: colors.mainGreen1,
+          tabBarActiveTintColor: colors.green[100],
         }}
       >
         <Tabs.Screen
