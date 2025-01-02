@@ -18,7 +18,7 @@ export default function WeeklyScreen() {
 
   return (
     <View style={styles.container}>
-      <YoutubePlayer
+      {/* <YoutubePlayer
         height={SCREEN_HEIGHT}
         width={SCREEN_WIDTH}
         volume={100}
@@ -34,7 +34,7 @@ export default function WeeklyScreen() {
               ? "hardware"
               : "none",
         }}
-      />
+      /> */}
     </View>
   );
 }
@@ -42,6 +42,5 @@ export default function WeeklyScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "red",
   },
 });
