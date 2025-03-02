@@ -20,6 +20,9 @@ export default function TabLayout() {
 						fontWeight: "bold",
 					},
 					tabBarActiveTintColor: colors.green[100],
+					sceneStyle: {
+						backgroundColor: colors.white[100],
+					},
 				}}
 			>
 				<Tabs.Screen

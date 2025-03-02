@@ -3,13 +3,14 @@ import { Pressable } from "./ui/pressable";
 import { Text } from "./ui/text";
 
 interface Props {
+	id: number;
 	date: Date;
 	title: string;
 	description: string;
 	onPress: () => void;
 }
 
-export default function WorkoutCard({ date, title, description, onPress }: Props) {
+export default function WorkoutCard({ id, date, title, description, onPress }: Props) {
 	return (
 		<Pressable onPress={onPress}>
 			{({ pressed }) => (
