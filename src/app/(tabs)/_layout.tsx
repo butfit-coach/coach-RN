@@ -25,19 +25,13 @@ export default function TabLayout() {
 				<Tabs.Screen
 					name="index"
 					options={{
-						title: "주간 운동",
-					}}
-				/>
-				<Tabs.Screen
-					name="previous"
-					options={{
-						title: "지난 운동 기록",
+						title: "Workout",
 					}}
 				/>
 				<Tabs.Screen
 					name="exercise"
 					options={{
-						title: "동작 별 기록",
+						title: "종목별",
 					}}
 				/>
 			</Tabs>
