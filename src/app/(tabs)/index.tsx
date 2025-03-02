@@ -13,7 +13,6 @@ export default function WorkoutScreen() {
 	const router = useRouter();
 
 	const handlePress = () => {
-		console.log("card");
 		router.push({
 			pathname: "/details/[id]",
 			params: {

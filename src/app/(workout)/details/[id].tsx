@@ -1,16 +1,25 @@
+import ExerciseRecord from "@/components/ExerciseRecord/ExerciseRecord";
+import { Box } from "@/components/ui/box";
 import { Text } from "@/components/ui/text";
+import { VStack } from "@/components/ui/vstack";
 import { useLocalSearchParams } from "expo-router";
-import { View } from "react-native";
+import { Keyboard, Pressable, ScrollView } from "react-native";
 
 export default function WorkoutDetailScreen() {
 	const { id, date, title, description } = useLocalSearchParams();
 
-	console.log(id, date, title, description);
-
 	return (
-		<View>
-			<Text>운동 상세 스크린 333</Text>
-			<Text>{id}</Text>
-		</View>
+		<ScrollView contentContainerStyle={{ flexGrow: 1 }} keyboardShouldPersistTaps="handled">
+			<Pressable onPress={Keyboard.dismiss} className="flex-1">
+				<Box className="py-4 px-4 h-full">
+					<Text>운동 기록 상세 {id}</Text>
+					<VStack className="mt-8" space="sm">
+						<ExerciseRecord title="풀업" />
+						<ExerciseRecord title="풀업" />
+						<ExerciseRecord title="풀업" />
+					</VStack>
+				</Box>
+			</Pressable>
+		</ScrollView>
 	);
 }
