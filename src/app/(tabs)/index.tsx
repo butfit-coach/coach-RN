@@ -14,7 +14,7 @@ export default function WorkoutScreen() {
 
 	const handlePress = () => {
 		router.push({
-			pathname: "/details/[id]",
+			pathname: "/(workout)/info",
 			params: {
 				id: 2,
 				date: "2025-03-02",
@@ -27,16 +27,26 @@ export default function WorkoutScreen() {
 	return (
 		<Box className="justify-center h-full">
 			<VStack space="sm" className="h-full px-4 py-4">
-				<Card variant="outline">
-					<Text>Hello</Text>
-				</Card>
-				<Card variant="outline">
-					<Text>Hello</Text>
-				</Card>
+				<WorkoutCard
+					id={3}
+					key={3}
+					date={new Date("2025-03-04")}
+					title="Workout 3"
+					description="Description 3"
+					onPress={handlePress}
+				/>
+				<WorkoutCard
+					id={2}
+					key={2}
+					date={new Date("2025-03-03")}
+					title="Workout 2"
+					description="Description 2"
+					onPress={handlePress}
+				/>
 				<WorkoutCard
 					id={1}
 					key={1}
-					date={new Date()}
+					date={new Date("2025-03-02")}
 					title="Workout 1"
 					description="Description 1"
 					onPress={handlePress}
