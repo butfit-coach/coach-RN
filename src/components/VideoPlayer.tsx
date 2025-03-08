@@ -20,7 +20,7 @@ export default function VideoPlayer({ videoSource }: Props) {
 
 	const player = useVideoPlayer(videoSource, (player) => {
 		player.loop = true;
-		player.play();
+		player.pause();
 	});
 	const { isPlaying } = useEvent(player, "playingChange", { isPlaying: player.playing });
 

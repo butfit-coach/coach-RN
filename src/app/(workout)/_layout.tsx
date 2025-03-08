@@ -34,6 +34,12 @@ export default function WorkoutLayout() {
 				}}
 				initialParams={{ id, date, title, description }}
 			/>
+			<Tabs.Screen
+				name="ranking"
+				options={{
+					href: null,
+				}}
+			/>
 		</Tabs>
 	);
 }

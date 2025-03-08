@@ -64,7 +64,7 @@ export default function ExerciseRecord({ title }: Props) {
 	};
 
 	return (
-		<Box className="w-full bg-gray-100 rounded-md flex items-center justify-center px-4 py-4">
+		<Box className="w-full border-gray-300 rounded-lg p-4 shadow-lg bg-white flex items-center justify-center px-4 py-4">
 			<VStack space="sm" className="w-full">
 				<Box className="w-full border border-gray-200 h-12 rounded-md flex items-center justify-center">
 					<Text>{title}</Text>

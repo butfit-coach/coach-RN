@@ -3,8 +3,12 @@ import { colors } from "@/styles/colors";
 import { Tabs } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
+import { usePathname } from "expo-router";
 
 export default function TabLayout() {
+	const pathname = usePathname();
+	console.log("tabLayout", pathname);
+
 	return (
 		<>
 			{/* 안드로이드 배너 색상 맞추기 위해 사용*/}

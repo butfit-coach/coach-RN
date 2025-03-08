@@ -15,9 +15,11 @@ export default function WorkoutRecordScreen() {
 			keyboardShouldPersistTaps="handled"
 		>
 			<Pressable onPress={Keyboard.dismiss} className="flex-1">
-				<Box className="py-4 px-4 h-full">
-					<Text>운동 기록 상세 {id}</Text>
-					<VStack className="mt-8" space="sm">
+				<Box className="py-2 px-4 h-full">
+					<Box className="flex flex-row pt-4 items-center">
+						<Text className="text-2xl font-bold">오늘의 운동 기록</Text>
+					</Box>
+					<VStack className="mt-5" space="sm">
 						<ExerciseRecord title="풀업" />
 						<ExerciseRecord title="풀업" />
 						<ExerciseRecord title="풀업" />
