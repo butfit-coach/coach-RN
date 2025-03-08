@@ -19,7 +19,7 @@ export default function ExerciseInfo({ title, videoSource, tips }: Props) {
 				<Box className="flex-1">
 					<Text className="text-sm">
 						<Text className="font-bold">무게 : </Text>
-						시작 라운드를 채울 수 있는 무게부터 10% 씩 증가
+						(기록 기반으로 추천)
 					</Text>
 					<Text className="text-sm">
 						<Text className="font-bold">횟수 : </Text>
